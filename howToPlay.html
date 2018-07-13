@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>effect</title>
+  <link href="https://fonts.googleapis.com/css?family=Ranchers&amp;subset=latin-ext" rel="stylesheet">
+  <script type="text/javascript" src="jqueryCDN.js"></script>
+  <style type="text/css">
+body{
+    background: #232930;
+    font-family: 'Ranchers', cursive;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+  }
+  p{
+      font-size: 50px;
+      color: green;
+        text-shadow:2px 2px rgba(237, 237, 101,0.8);
+        text-align: center;
+        padding-top: 140px;
+        
+    }
+
+
+  .ml2 {
+  font-weight: 900;
+  
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 4.5em;
+}
+
+    a{
+      color:black;
+      background:#a7e845 ;
+      text-shadow: 2px 2px yellow;
+
+      border: none;
+      border-radius: 15%;
+      padding:5px 10px;
+      float: right;
+      margin-top: 160px;
+      margin-right: 30px;
+      text-decoration: none;
+    
+    }
+#back{
+    color:black;
+      background:#a7e845 ;
+      text-shadow: 2px 2px yellow;
+      border: none;
+      border-radius: 15%;
+      padding:5px 10px;
+      float: left;
+      margin-top: 160px;
+      
+      text-decoration: none;
+    
+    }
+
+
+</style>
+</head>
+<body><p class="ml2">Tap any key in between a and z and enjoy the different tunes!!</p>
+<a href="patatapClone.html">LET'S START</a>
+<a id="back"href="index.html">BACK</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script type="text/javascript">// Wrap every letter in a span
+$('.ml2').each(function(){
+  $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [7,0.9],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: function(el, i) {
+      return 70*i;
+    }
+  }).add({
+    targets: '.ml2',
+    opacity: 0.7,
+    duration: 1500,
+    easing: "easeOutExpo",
+    delay: 1000
+  });</script>
+</body>
+</html>

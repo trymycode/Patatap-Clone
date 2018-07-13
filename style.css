@@ -1,0 +1,29 @@
+#msg{
+    font-size: 80px;
+    text-align: center;
+    margin-top: 20%;
+    color:#a7e845 ;
+     text-shadow: 2px 2px yellow;
+
+
+
+    }
+    body{
+        background: #232930;
+        font-family: 'Ranchers', cursive;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    a{
+    	color:black;
+    	background:#a7e845 ;
+    	border: none;
+    	border-radius: 15%;
+    	padding:5px 10px;
+    	float: right;
+    	margin-top: 250px;
+    	margin-right: 20px;
+    	text-decoration: none;
+    
+    }
